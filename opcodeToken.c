@@ -17,7 +17,8 @@ char **han_token(char *cmd)
 	len = _strlen(cmd);
 	arr = malloc(sizeof(char *) * (len + 1));
 	if (arr == NULL)
-		exit(0);
+		print("Error: malloc failed\n")
+		exit(EXIT_FAILURE);
 
 	tok = strtok(cmd, " \n");
 	while (tok != NULL)
